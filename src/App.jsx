@@ -16,19 +16,24 @@ function App() {
     try {
       const API_KEY = import.meta.env.VITE_API_NINJAS_KEY;
 
-      // Health quote from API Ninjas
+      // 1️⃣ Health Quote
       const quoteRes = await fetch("https://api.api-ninjas.com/v2/quotes?categories=health", {
         headers: { "X-Api-Key": API_KEY },
       });
-      if (!quoteRes.ok) throw new Error("Quote fetch failed");
       const quoteData = await quoteRes.json();
       setQuote(quoteData[0]);
 
-      // Relaxation activity from Bored API
-      const activityRes = await fetch("https://www.boredapi.com/api/activity?type=relaxation");
-      if (!activityRes.ok) throw new Error("Activity fetch failed");
-      const activityData = await activityRes.json();
-      setActivity(activityData.activity);
+      // 2️⃣ Random Exercise Habit
+      const exerciseTypes = ["stretching", "strength", "cardio", "plyometrics", "yoga", "powerlifting"];
+      const randomType = exerciseTypes[Math.floor(Math.random() * exerciseTypes.length)];
+
+      const exerciseRes = await fetch(
+        `https://api.api-ninjas.com/v1/exercises?type=${randomType}`,
+        { headers: { "X-Api-Key": API_KEY } }
+      );
+      const exerciseData = await exerciseRes.json();
+      const randomExercise = exerciseData[Math.floor(Math.random() * exerciseData.length)];
+      setActivity(`${randomExercise.name}: ${randomExercise.instructions}`);
 
     } catch (err) {
       setError(err.message);

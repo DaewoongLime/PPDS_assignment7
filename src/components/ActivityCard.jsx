@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function ActivityCard({ activity }) {
   return (
     <div className="card">

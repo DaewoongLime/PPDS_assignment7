@@ -1,20 +1,18 @@
 # HealthyBit
 ## Problem Statement
-After being sick recently, I realized that I have been living unhealthily.  
-Changing lifestyle all at once is difficult, so I wanted to start with something small to be healthy. 
+After being sick recently, I realized that I have been living unhealthily.   Changing lifestyle all at once is difficult, so I wanted to start with something small to be healthy. 
 
 ## Solution
-HealthyBit helps me take care of my health in a small but meaningful way.  
-Instead of trying to change everything at once, the app gives me one small action I can actually do today — whether it’s a short stretch, a breathing exercise, or a reminder to move.  
+HealthyBit helps me take care of my health in a small but meaningful way.   Instead of trying to change everything at once, the app gives me one small action I can actually do today: whether it’s a short stretch, a breathing exercise, or a reminder to move.  
 
 Each time I open the app, it shows:
 - A **motivational health quote** to inspire me, and  
 - A **simple physical habit** that I can practice right away.
 
-By turning these small moments into daily habits, HealthyBit makes staying healthy feel easy and achievable — especially on days when I need a gentle push to take care of myself.
+By turning these small moments into daily habits, HealthyBit makes staying healthy feel easy and achievable, especially on days when I need a gentle push to take care of myself.
 
 ## API Used
-- **API Name 1:** API Ninjas Quotes API
+- **API Name:** API Ninjas Quotes API
 - **API Documentation**: https://api-ninjas.com/api/quotes
 - **How it's used**: Fetches a daily motivational quote related to health and random physical activities to use as daily micro-habits. 
 
@@ -52,7 +50,7 @@ AI was helpful because:
 - Wrote code that I didn't know, which led me to learn from it
 
 ## Screenshots
-[](screenshot.png)
+![list](screenshot.png)
 
 ## Future Improvements
 - Save each day’s habit history in localStorage
